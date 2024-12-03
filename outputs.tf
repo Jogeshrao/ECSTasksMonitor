@@ -1,14 +1,9 @@
-output "lambda_function_name" {
-  value       = aws_lambda_function.monitor_lambda.function_name
-  description = "Name of the created Lambda function"
+output "sns_topic_arn" {
+  description = "ARN of the SNS topic for alerts"
+  value       = aws_sns_topic.ecs_alerts.arn
 }
 
-output "lambda_function_arn" {
-  value       = aws_lambda_function.monitor_lambda.arn
-  description = "ARN of the created Lambda function"
-}
-
-output "cloudwatch_rule_arn" {
-  value       = aws_cloudwatch_event_rule.monitor_schedule.arn
-  description = "ARN of the CloudWatch Event Rule"
+output "cloudwatch_alarm_arn" {
+  description = "ARN of the CloudWatch alarm"
+  value       = aws_cloudwatch_metric_alarm.ecs_task_count.arn
 }

@@ -1,0 +1,5 @@
+aws_region = "us-west-2"
+ecs_cluster_name = "my-ecs-cluster"
+ecs_service_name = "my-ecs-service"
+pagerduty_integration_key = "your-integration-key-here"
+alarm_threshold = 2
